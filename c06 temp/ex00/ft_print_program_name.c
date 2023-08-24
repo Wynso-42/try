@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_print_program_name.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: allevass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/24 10:03:05 by allevass          #+#    #+#             */
-/*   Updated: 2023/08/24 10:04:25 by allevass         ###   ########.fr       */
+/*   Created: 2023/08/24 17:22:55 by allevass          #+#    #+#             */
+/*   Updated: 2023/08/24 17:23:03 by allevass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	ft_strlen(char *str)
+int	main(int argc, char **argv)
 {
-	int	i;
+	int	c;
 
-	i = 0;
-	while (*str != '\0')
+	c = 0;
+	if (argc > 0)
 	{
-		i++;
-		str++;
+		while (argv[0][c] != '\0')
+		{
+			write(1, &argv[0][c], 1);
+			c++;
+		}
+		write(1, "\n", 1);
 	}
-	return (i);
+	return (0);
 }
