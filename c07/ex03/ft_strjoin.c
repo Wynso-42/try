@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <stdio.h>
 
 int	ft_strlen(char *str)
 {
@@ -76,9 +77,8 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	return (res);
 }
 
-/*#include <stdio.h>
-
-int main(){
+/*int main()
+{
     char    *tab[] = {"salut","tu","vas","bien","?"};
     char *r = ft_strjoin(5, tab, " ");
     printf("%s",r);
