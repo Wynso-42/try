@@ -79,7 +79,7 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 
 /*int main()
 {
-    char    *tab[] = {"salut","tu","vas","bien","?"};
-    char *r = ft_strjoin(5, tab, " ");
+    char    *tab[] = {};
+    char *r = ft_strjoin(0, tab, " ");
     printf("%s",r);
 }*/
